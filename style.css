@@ -1,0 +1,257 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #111111, #252525);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    overflow-x: hidden;
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    font-size: clamp(42px, 8vw, 75px);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ff3030;
+    margin-bottom: 25px;
+    text-shadow: 0 0 20px rgba(255, 48, 48, 0.3);
+}
+
+/* FRASE PRINCIPAL */
+p {
+    font-size: 20px;
+    color: #cccccc;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* NOMBRES DE LOS TRES AMIGOS */
+h2 {
+    font-size: clamp(22px, 4vw, 35px);
+    color: white;
+    margin: 15px 0 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #ff3030;
+    padding-bottom: 10px;
+}
+
+/* SEGUNDO PÁRRAFO */
+h2 + p {
+    color: #ff5050;
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* BOTÓN */
+button {
+    margin-top: 20px;
+    padding: 16px 35px;
+    background-color: #ff3030;
+    color: white;
+    border: 2px solid #ff3030;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(255, 48, 48, 0.2);
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+button:hover {
+    background-color: transparent;
+    color: #ff3030;
+    transform: scale(1.05);
+    box-shadow: 0 5px 25px rgba(255, 48, 48, 0.4);
+}
+
+/* EFECTO AL PRESIONAR */
+button:active {
+    transform: scale(0.97);
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 600px) {
+    h1 {
+        letter-spacing: 2px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    h2 {
+        letter-spacing: 1px;
+    }
+
+    button {
+        padding: 14px 25px;
+        font-size: 15px;
+    }
+}
+
+
+/* ENCABEZADO */
+header {
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+    background: #080808;
+    border-bottom: 2px solid #ff3030;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+/* SECCIONES */
+section {
+    padding: 65px 20px;
+    text-align: center;
+    scroll-margin-top: 20px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+/* INICIO */
+.inicio {
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #151515, #292929);
+}
+
+/* BOTONES Y ENLACES */
+.boton {
+    display: inline-block;
+    margin: 15px 8px;
+    padding: 14px 25px;
+    background: #ff3030;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #ff3030;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: transparent;
+    color: #ff3030;
+    transform: translateY(-3px);
+}
+
+/* SERVICIOS */
+.servicios {
+    background: #101010;
+}
+
+.descripcion {
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.contenedor-tarjetas {
+    max-width: 1100px;
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.tarjeta {
+    background: #202020;
+    border: 1px solid #383838;
+    border-radius: 10px;
+    padding: 30px 20px;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    border-color: #ff3030;
+    transform: translateY(-5px);
+}
+
+.tarjeta h3 {
+    color: #ff3030;
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+.tarjeta p {
+    color: #cccccc;
+    margin-bottom: 0;
+}
+
+/* CONTACTO */
+.contacto {
+    background: #1b1b1b;
+}
+
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    padding: 25px 15px;
+    text-align: center;
+    background: #080808;
+    border-top: 2px solid #ff3030;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+/* CELULARES */
+@media (max-width: 700px) {
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 45px 18px;
+    }
+
+    .redes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .red-social {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+}
